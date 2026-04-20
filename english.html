@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/PNG" href="RNK.PNG">
+  <title>HTML Course A to Z</title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: white;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      margin-top: 0;
+      background: #0078d7;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    header {
+      margin-top: 0;
+      background: linear-gradient(to right, rgb(67, 67, 126), blue, rgb(60, 60, 124));
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+      position: relative;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      margin: 15px auto;
+    }
+
+    h2 {
+      color: #0078d7;
+      border-bottom: 2px solid #0078d7;
+      padding-bottom: 5px;
+    }
+
+    h3 {
+      color: #444;
+    }
+
+    pre {
+      background: #272822;
+      color: white;
+      border-radius: 10px;
+      overflow-x: auto;
+      padding: 10px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    iframe {
+      width: 100%;
+      height: auto;
+      min-height: 100px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    .lesson {
+      margin-bottom: 40px;
+    }
+
+    .output-label {
+      font-weight: bold;
+      color: #0078d7;
+      margin-top: 10px;
+      display: inline-block;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+      margin-top: 30px;
+      font-size: 0.9rem;
+    }
+
+    /* Navigation Styles */
+    .lesson-nav {
+      background: #f5f5f5;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .lesson-nav h3 {
+      margin-top: 0;
+      color: #0078d7;
+    }
+
+    .lesson-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .lesson-link {
+      display: inline-block;
+      background: #0078d7;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .lesson-link:hover {
+      background: #005a9e;
+    }
+
+    .lesson-section {
+      scroll-margin-top: 20px;
+    }
+
+    /* Language Selector Button */
+    .language-selector-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #ff9800;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .language-selector-btn:hover {
+      background: #e68900;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .language-selector-btn:active {
+      transform: translateY(0);
+    }
+
+    @media only screen and (max-width: 480px) {
+      .container {
+        padding: 10px;
+        margin: 10px auto;
+      }
+
+      header,
+      h1 {
+        font-size: 1.5rem;
+        padding: 15px;
+      }
+
+      .lesson-links {
+        gap: 5px;
+      }
+
+      .lesson-link {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+      }
+
+      .language-selector-btn {
+        position: static;
+        margin-top: 10px;
+        display: block;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>Full HTML Course by Najaf
+    <button class="language-selector-btn" id="languageBtn">Language Selector</button>
+  </header>
+  <div class="container">
+    <div class="lesson-nav">
+      <h3>Jump to Lesson:</h3>
+      <div class="lesson-links">
+        <a href="#lesson1" class="lesson-link">Lesson 1</a>
+        <a href="#lesson2" class="lesson-link">Lesson 2</a>
+        <a href="#lesson3" class="lesson-link">Lesson 3</a>
+        <a href="#lesson4" class="lesson-link">Lesson 4</a>
+        <a href="#lesson5" class="lesson-link">Lesson 5</a>
+        <a href="#lesson6" class="lesson-link">Lesson 6</a>
+      </div>
+    </div>
+    <br>
+    <div id="lesson1" class="lesson-section">
+      <h1>Lesson - 1: Introduction to HTML</h1>
+      <h3>1. What is HTML CSS JS</h3>
+      <p>First of all, HTML stands for <b>Hyper Text Markup Language</b>. CSS stands for <b>Cascading Style
+          Sheets</b>. And JS stands for <b>JavaScript</b>. Now let's understand what these do.</p>
+      <h4>1. HTML</h4>
+      <p>HTML is used to create the structure of a website.</p>
+      <h4>2. CSS</h4>
+      <p>CSS is used to make the website beautiful.</p>
+      <h4>3. JS</h4>
+      <p>JS is used to add functions to the website.</p>
+      <h3>2. Easy Example of HTML CSS JS Use</h3>
+      <p>First look at a house - first its structure is built as shown in photo 1, then to make it beautiful, paint is
+        applied. Then which button turns on the light, which button turns on the fan - to add these functions we use
+        JS. Basically, there's more to it in reality, but this is a very easy example.</p>
+      <img
+        src="https://yt3.ggpht.com/-PlJoRlBxKWLpcwrkes_oBJeKL5k_lq7az6epcmxwPC7ojNX1cV0LMq6BcaIY8aHL5fSivNmbrW_=s640-c-fcrop64=1,08910000f76effff-rw-nd-v1"
+        alt="html example" width="356">
+      <h3>Photo.1:HTML</h3>
+      <img
+        src="https://yt3.ggpht.com/VaP1bFUiid1TVRjeVPQnwDOFidbOGWFmV_O5_iUZZEjWsM2_4OcZA4CjGzM7MQOqj83T4v6G4wmgvGo=s640-c-fcrop64=1,0b6b0000f494ffff-rw-nd-v1"
+        alt="css" width="356">
+      <h3>Photo.2:CSS</h3>
+      <img
+        src="https://yt3.ggpht.com/6OR1Q4VJx7lKnu_CUiGp00_Mta-TOwxeyjd8OepzWj1IkDVTbi6bdw26GOPx9cqfz4RHliljiKjvQLg=s640-c-fcrop64=1,0a6e0000f591ffff-rw-nd-v1"
+        alt="js" width="356">
+      <h3>Photo.3:JS</h3>
+      <hr>
+      <h3>3. How does a Website work?</h3>
+      <p>Actually, Chrome reads HTML and accordingly creates the website as I said - HTML is used for structure, CSS
+        for styling, and JS for adding functions.</p>
+
+      <h3>4. What are Tags?</h3>
+      <p>You probably know about the HTML boilerplate - in it you'll see tags like <b>&lt;!DOCTYPE html&gt;</b> This
+        is also a tag and <b>&lt;html&gt;</b> is also a tag which has a closing tag <b>&lt;/html&gt;</b>. The thing
+        is that every tag has a specific function, for example <b>&lt;h1&gt;Hi&lt;/h1&gt;</b> this is an h1 tag and
+        its function is to print heading on screen which is bold and slightly larger. Now I'm sure you understand
+        what tags are. Now we know what the tags in the boilerplate do.</p>
+      <h2>1.1. Boilerplate of HTML</h2>
+      <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+      <h3>1. Use of &lt;!DOCTYPE html&gt;</h3>
+      <p>This actually tells Chrome that we are using advanced HTML which is <b>HTML5</b></p>
+      <h3>2. Use of &lt;html lang="en"&gt;</h3>
+      <p>This is used like this - inside html there is an attribute lang="en" which indicates that the language will
+        be English, and all content comes inside html.</p>
+      <h3>3. Use of &lt;head&gt;</h3>
+      <p>Inside this come those things which will do some work but won't be printed on the website. We'll see later
+        what's inside it. For now, ignore the <b>meta</b> tag, we'll see it later.</p>
+      <h3>4. Use of &lt;title&gt;</h3>
+      <p>This is used to display our website's title which is not visible on the main page.</p>
+      <h3>5. Use of &lt;body&gt;</h3>
+      <p>This will contain the content that we want to show on the main page.</p>
+      <h2>1.2. Type of Tags</h2>
+      <p>There are 2 types of tags: <b>Paired Tags</b> and <b>Unpaired Tags</b></p>
+      <h3>1. Paired Tags</h3>
+      <p>These are tags that have an opening tag and a closing tag like:
+        <b>&lt;tagName&gt;Anything&lt;/tagName&gt;</b>
+      </p>
+      <h3>2. Unpaired Tags</h3>
+      <p>Those tags which have an opening tag but no closing tag like: <b>&lt;tagName&gt;</b> We'll learn more about
+        these later. For now, we'll learn some tags - actually there are many tags but we only need to learn those
+        that are important and used everywhere. So now we'll meet in Lesson Number 2.</p>
+    </div>
+    <div id="lesson2" class="lesson-section">
+
+      <h1>Lesson - 2: Learn about same tags</h1>
+      <h3>Comments</h3>
+      <p>Before learning about tags, you should first understand what comments are. Actually, whatever we write inside
+        the
+
+        <body> tag gets printed/displayed, but if we need to write something that the person viewing our code can read
+          (i.e., comments), we use comments. This way, they can read what is written inside them. And its structure is
+          something like this:
+      </p>
+      <p><b>&lt;!-- Anything here --&gt;</b></p>
+      <h3>1. Paragraph Tag</h3>
+      <p>The paragraph tag is a paired tag and whatever is written inside it will be shown in paragraph form. An
+        example is given below.</p>
+      <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;Hi this is a paragraph tag.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+      <div class="output-label">Output:</div>
+      <iframe class="auto-height-iframe" srcdoc="
+        <p>Hi this is a paragraph tag.</p>
+      "></iframe>
+      <h3>2. Heading Tags</h3>
+      <p>There are 6 heading tags as shown below:</p>
+      <b>&lt;h1&gt;Anything&lt;/h1&gt;</b>
+      <b>&lt;h2&gt;Anything&lt;/h2&gt;</b>
+      <b>&lt;h3&gt;Anything&lt;/h3&gt;</b>
+      <b>&lt;h4&gt;Anything&lt;/h4&gt;</b>
+      <b>&lt;h5&gt;Anything&lt;/h5&gt;</b>
+      <b>&lt;h6&gt;Anything&lt;/h6&gt;</b>
+      <p>First look at an example of all these:</p>
+      <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Heading 1&lt;/h1&gt;
+  &lt;h2&gt;Heading 2&lt;/h2&gt;
+  &lt;h3&gt;Heading 3&lt;/h3&gt;
+  &lt;h4&gt;Heading 4&lt;/h4&gt;
+  &lt;h5&gt;Heading 5&lt;/h5&gt;
+  &lt;h6&gt;Heading 6&lt;/h6&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+      <div class="output-label">Output:</div>
+      <iframe class="auto-height-iframe" srcdoc="
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+      "></iframe>
+      <h3>3. Use of Heading tags</h3>
+      <p>If you have to write notes on something, like there's a note written below something, then what happens is
+        there's one main heading, then its points, then points of those points are written.</p>
+      <h3>4. Use of span tag</h3>
+      <p>You can think of span tag as a p tag because it also prints text and p tag also does. But the difference is
+        that p tag takes all the space after it. For example, if I create one p tag Hi and another Whats Up, then
+        the second text will come below. But this doesn't happen in span. Actually p is a block element and span is
+        an inline tag. Their list is very long, you can check anywhere which tags are inline and which are block. An
+        example is given below.</p>
+
+      <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;Hi&lt;/p&gt;
+  &lt;p&gt;Guys!&lt;/p&gt;
+  &lt;span&gt;Hi&lt;/span&gt;
+  &lt;span&gt;Guys!&lt;/span&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+      <div class="output-label">Output:</div>
+      <iframe class="auto-height-iframe" srcdoc="
+        <p>Hi</p>
+        <p>Guys</p>
+        <span>Hi</span>
+        <span>Guys!</span>
+      "></iframe>
+      <h3>5. br Tag</h3>
+      <p>br is an unpaired tag and it creates a line break. An example is given below.</p>
+      <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;p&gt;Hi this is a&lt;br&gt;Br tag.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+      <div class="output-label">Output:</div>
+      <iframe class="auto-height-iframe" srcdoc="
+        <p>Hi this is a<br>Br tag.</p>
+      "></iframe>
+      <h3>6. hr Tag</h3>
+      <p>This is also an unpaired tag and it breaks the line but also creates a line. An example is given below.</p>
+      <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;p&gt;Hi this is a&lt;/p&gt;
+   &lt;hr&gt;
+   &lt;p&gt;Hr tag.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+      <div class="output-label">Output:</div>
+      <iframe class="auto-height-iframe" srcdoc="
+        <p>Hi this is a</p>
+        <hr>
+        <p>Hr tag</p>
+      "></iframe>
+      <h3>7. b, i, u and strong Tags</h3>
+      <p>These actually give design to text. An example is given below.</p>
+      <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;p&gt;This is &lt;b&gt;bold text&lt;/b&gt;.&lt;/p&gt;
+   &lt;p&gt;This is &lt;strong&gt;important text&lt;/strong&gt;.&lt;/p&gt;
+   &lt;p&gt;This is &lt;i&gt;italic text&lt;/i&gt;.&lt;/p&gt;
+   &lt;p&gt;This is &lt;u&gt;underlined text&lt;/u&gt;.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      <div class="output-label">Output:</div>
+      <iframe class="auto-height-iframe" srcdoc="
+        <p>This is <b>bold text</b>.</p>
+        <p>This is <strong>important text</strong>.</p>
+        <p>This is <i>italic text</i>.</p>
+        <p>This is <u>underlined text</u>.</p>
+      "></iframe>
+      <h3>8. Anchor Tag</h3>
+      <p>Anchor Tag is represented by &lt;a&gt;. Its proper structure is: <b>&lt;a
+          href="Any-Link"&gt;AnyText&lt;/a&gt;</b>. Inside a there is href which is called attribute. Attributes
+        that come inside a tag also do a specific job. Now the job of a tag is that first a link is given, then
+        anything is written, any word. When the user clicks on that word, they will reach that link. An example is
+        given below. Also, with href another attribute is used which is target, and inside it is written _blank
+        which means it will open the link in a separate tab.</p>
+      <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;a href="https://www.google.com" target="_blank"&gt;Google&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      <div class="output-label">Output:</div>
+      <iframe class="auto-height-iframe" srcdoc="
+        <a href='https://www.google.com' target='_blank'>Google</a>
+      "></iframe>
+      <h3>9. div Tag</h3>
+      <p>You'll understand div tag better as we go further. Actually, many tags can come inside it and it's a block
+        type element. There's no need to give an example now, we'll give an example when we study it in detail.</p>
+      <h3>10. sup and sub tags</h3>
+      <p>You see this example: <b>1x10<sup>-12</sup></b>. How did I write -12 above the 10? The answer is by using the
+        sup (superscript) tag. And now look at this: <b>H<sub>2</sub>O</b>. How did I write the 2 below the H? The
+        answer is with the help of the sub (subscript) tag. Whenever you encounter a situation where you need to write a
+        chemical formula like H<sub>2</sub>O or a math expression like 1x10<sup>-12</sup> in HTML, always use the sub
+        and sup tags.</p>
+      <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;1x10&lt;sub&gt;-12&lt;/sub&gt;&lt;/p&gt;
+  &lt;p&gt;H&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      <div class="output-label">Output:</div>
+      <iframe class="auto-height-iframe" srcdoc="
+        <p>1x10<sup>-12</sup></p>
+        <p>H<sub>2</sub>O</p>
+      "></iframe>
+      <h3>11. button Tag</h3>
+      <p>From its name itself it's clear that it will print a button. See in the example.</p>
+      <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;p&gt;This is a Button&lt;/p&gt;
+   &lt;button&gt;Click Me!&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      <div class="output-label">Output:</div>
+      <iframe class="auto-height-iframe" srcdoc="
+        <p>This is a Button</p>
+        <button>Click Me!</button>
+      "></iframe>
+      <h3>12. img Tag</h3>
+      <p>
+        Imagine you want to show an image on your website — how will you do that? For this, we use the img tag. It is
+        used to display images on a website.This tag has only an opening tag; it does not have a closing tag. Inside the
+        img tag, we use some attributes such as src="".
+        In this attribute, you can add the image link (if it’s online) or the image name (if it’s saved locally).There
+        is also another attribute called alt. In this attribute, you write the text that will be shown if the image
+        doesn’t load on the website.Another attribute is width, which is used to set the size of the image.For example,
+        if I have an image named lion.jpg, then to show it on my website, I will write this code:
+      </p>
+      <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;img src="lion.jpg" alt="Lion photo" width="356"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      <h3>13. video Tag</h3>
+      <p>
+        Now, if you want to show a video instead of an image, you can use the video tag.
+        This tag has an opening tag and a closing tag.
+        Between these two tags, you can write the text that will appear if the video doesn’t work on the user’s browser.
+        In this tag, the src attribute is used to add the video file.
+        To let the user control the video (like play, pause, volume), we use the controls attribute.
+        There are also other attributes, such as autoplay, which automatically starts the video as soon as the user
+        opens the website.
+        You can also set the video size using the width attribute.
+      </p>
+      <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;video src="tiger.mp4" width="356" controls&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      <h3>14. How to go from one HTML file to another</h3>
+<p>Sometimes, while creating a website, we need not only one but 4 HTML files. So here’s the thing from the main HTML file, how do we move to another HTML file? You’ll see an example of this below.</p>
+
+<h3>File name is index.html</h3>
+<pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;p&gt;This file name is index.html&lt;/p&gt;
+   &lt;p&gt;Click this &lt;a href="/about.html"&gt;About&lt;/a&gt; if you want to see about this website.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h3>File name is about.html</h3>
+<pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;p&gt;This file name is about.html&lt;/p&gt;
+   &lt;p&gt;This will make you a Web Designer&lt;/p&gt;
+   &lt;p&gt;If you want to go back click here &lt;a href="/index.html"&gt;Home&lt;/a&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h3>Explanation</h3>
+<p>In this example, there are two files index.html and about.html. Whenever you host a website, the index.html file is always the first one that Chrome shows. After that, you can make other HTML files and move between them. To move from one HTML file to another, we use the anchor tag and write the file name inside the href attribute. It’s important to always put <b>/</b> at the start. If the HTML file you want to go to is inside a folder, you also need to write that folder’s name. For example, if about.html is inside a folder named main, then to open it you will write <b>main/about.html</b>.</p>
+
+      <h2>Practicals</h2>
+      <h3>Q1. Create a nice website using these tags: p, h1, button, a, img, i, b, u.</h3>
+
+      <h3>Q2. Make a small website that shows some images of things you want to sell.
+        Below each image, write its price and how many pieces or pairs you have.</h3>
+
+      <h3>Q3. Make a website where, inside the p tag, first write "Hi"
+        then press the spacebar 12 times, and then write "Guys".
+        Now check the output did the 12 spaces appear or not?
+        After that, use the pre tag instead of the p tag, do the same thing again,
+        and then see the result.</h3>
+
+
+    </div>
+    <div id="lesson3" class="lesson-section">
+      <h1>Lesson - 3: Lists</h1>
+      <h3>1. Starting</h3>
+      <p>Suppose you want to show a list of many things in HTML, how will you show it? For this there are 3 tags:
+        <b>1.&lt;ol&gt;&lt;/ol&gt; 2.&lt;ul&gt;&lt;/ul&gt; 3.&lt;dl&gt;&lt;/dl&gt;</b>
+      </p>
+      <h3>1. Ordered List</h3>
+      <p>In ordered list, first we write ol tag, then inside it we write li tag. li means list item that we want to
+        display. An example is given below.</p>
+       <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;p&gt;This is an Order List&lt;/p&gt;
+   &lt;ol&gt;
+       &lt;li&gt;Boil Water: Take one cup of water in a pan.&lt;li&gt;
+       &lt;li&gt;Add Basics: Put in sugar and tea leaves.&lt;/li&gt;
+       &lt;li&gt;Crush Spices: Crush ginger and add it to the water.&lt;/li&gt;
+       &lt;li&gt;Let it Boil: Let the mixture boil well for about 2-3 minutes. This gets the flavour out.&lt;/li&gt;
+       &lt;li&gt;Add Milk: Pour in the milk.&lt;/li&gt;
+       &lt;li&gt;Simmer Gently: Let it simmer for another 1-2 minutes.&lt;/li&gt;
+       &lt;li&gt;Strain It: Turn off the gas and strain the tea into a cup.&lt;/li&gt;
+       &lt;li&gt;Enjoy Hot: Your hot tea is ready! Enjoy it with a biscuit.&lt;/li&gt;
+    &lt;/ol&gt;   
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      <div class="output-label">Output:</div>
+      <iframe class="auto-height-iframe" srcdoc="
+    <p>This is an Order List</p>
+
+      <ol>
+       <li>Boil Water: Take one cup of water in a pan.</li>
+       <li>Add Basics: Put in sugar and tea leaves.</li>
+       <li>Crush Spices: Crush ginger and add it to the water.</li>
+       <li>Let it Boil: Let the mixture boil well for about 2-3 minutes. This gets the flavour out.</li>
+       <li>Add Milk: Pour in the milk.</li>
+       <li>Simmer Gently: Let it simmer for another 1-2 minutes.</li>
+       <li>Strain It: Turn off the gas and strain the tea into a cup.</li>
+       <li>Enjoy Hot: Your hot tea is ready! Enjoy it with a biscuit.</li>
+      </ol>   
+      "></iframe>
+      <h3>2. Unordered List</h3>
+      <p>This is that list in which order is not maintained, like a shopping list. In it there's no order that first
+        this should be taken then that, rather whatever is available should be taken. This is written inside ul tag
+        in the form of li tag. An example is given below.</p>
+      <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;p&gt;This is an Unordered List&lt;/p&gt;
+   &lt;ul&gt;
+     &lt;li&gt;Milk&lt;/li&gt;
+     &lt;li&gt;Bread&lt;/li&gt;
+     &lt;li&gt;Eggs&lt;/li&gt;
+     &lt;li&gt;Potatoes&lt;/li&gt;
+     &lt;li&gt;Onions&lt;/li&gt;
+     &lt;li&gt;Tea Powder&lt;/li&gt;
+     &lt;li&gt;Biscuits&lt;/li&gt;
+     &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      <div class="output-label">Output:</div>
+      <iframe class="auto-height-iframe" srcdoc="
+        <p>This is an Unordered List</p>
+        <ul>
+   <li>Milk</li>
+   <li>Bread</li>
+   <li>Eggs</li>
+   <li>Potatoes</li>
+   <li>Onions</li>
+   <li>Tea Powder</li>
+   <li>Biscuits</li>
+   </ul>
+      "></iframe>
+      <h3>3. Definition List</h3>
+      <p>From its name itself it's clear that this will be used to show someone's definition. The way to write it is
+        slightly different. First we put dl tag, then inside it we put dt tag which will take a word, then in dd tag
+        we put its detail meaning definition. An example is given below.</p>
+      <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;p&gt;This is a Definition List&lt;/p&gt;
+  &lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;HyperText Markup Language is a simple language to create a webpage.&lt;/dd&gt;
+  &lt;dt&gt;Chemistry&lt;/dt&gt;
+  &lt;dd&gt;Chemistry is the scientific study of matter and the changes it undergoes.&lt;/dd&gt;
+  &lt;dt&gt;Physics&lt;/dt&gt;
+  &lt;dd&gt;Physics is the natural science that studies matter, energy, space, and time, and how they relate to one another.&lt;/dd&gt;
+  &lt;/dl&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      <div class="output-label">Output:</div>
+      <iframe class="auto-height-iframe" srcdoc="
+        <p>This is a Definition List</p>
+        <dl>
+  <dt>HTML</dt>
+  <dd>HyperText Markup Language is a simple language to create a webpage.</dd>
+  <dt>Chemistry</dt>
+  <dd>Chemistry is the scientific study of matter and the changes it undergoes.</dd>
+  <dt>Physics</dt>
+  <dd>Physics is the natural science that studies matter, energy, space, and time, and how they relate to one another.</dd>
+  </dl>
+      "></iframe>
+      <h2>Practicals</h2>
+
+      <h3>Q1. You have to make a list of subjects you study in school.
+        Write them in the order you study them — first subject, second subject, and so on, using an ordered list.</h3>
+
+      <h3>Q2. Make a list of things you would buy if you went shopping.</h3>
+
+      <h3>Q3.</h3>
+      <h3>1. Vibration</h3>
+      <h3>2. Reverse Reaction</h3>
+      <h3>3. Equilibrium Constant</h3>
+
+      <h3>Write Definatio of them.</h3>
+
+    </div>
+    <div id="lesson4" class="lesson-section">
+      <h1>Lesson - 4: HTML Tables</h1>
+
+      <h3>1. What is the use of tables in HTML?</h3>
+      <p>Tables are used to display data in a structured format. For example, if you have student data with names,
+        ages, classes, and fees, you can display this information in a table format. Tables are particularly useful
+        when you have a lot of data that needs to be organized in rows and columns.</p>
+
+      <h3>2. How to create a table?</h3>
+      <p>Tables start with the &lt;table&gt; tag, and everything goes inside it. First, we use the &lt;thead&gt; tag
+        (which is a paired tag) to create the table header. Inside the header, we write the column names like Name,
+        Roll No, Class, and Fee. Then we use the &lt;tbody&gt; tag where we add all the student data like Ali, 35,
+        7th, 2300rs, etc. You can't just write this data randomly; there's a specific structure to follow, as shown
+        in the example code below.</p>
+
+      <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;h2&gt;This is a Table&lt;/h2&gt;
+  &lt;table border="1"&gt;
+   &lt;thead&gt;
+     &lt;tr&gt; 
+       &lt;th&gt;Name&lt;/th&gt; &lt;th&gt;RollNo&lt;/th&gt; &lt;th&gt;Class&lt;/th&gt; &lt;th&gt;Fee&lt;/th&gt;
+     &lt;/tr&gt;
+   &lt;/thead&gt;
+   &lt;tbody&gt;
+     &lt;tr&gt;
+       &lt;td&gt;Ali&lt;/td&gt; &lt;td&gt;35&lt;/td&gt; &lt;td&gt;7th&lt;/td&gt; &lt;td&gt;2300rs&lt;/td&gt;
+     &lt;/tr&gt;
+     &lt;tr&gt;
+       &lt;td&gt;Ahmed&lt;/td&gt; &lt;td&gt;12&lt;/td&gt; &lt;td&gt;5th&lt;/td&gt; &lt;td&gt;1300rs&lt;/td&gt;
+     &lt;/tr&gt;
+     &lt;tr&gt;
+       &lt;td&gt;Abdulah&lt;/td&gt; &lt;td&gt;56&lt;/td&gt; &lt;td&gt;9th&lt;/td&gt; &lt;td&gt;3200rs&lt;/td&gt;
+     &lt;/tr&gt;
+   &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+      <div class="output-label">Output:</div>
+      <iframe class="auto-height-iframe" srcdoc="
+    <h2>This is an Table</h2>
+    <table border='1'>
+        <thead>
+     <tr> 
+       <th>Name</th> <th>RollNo</th> <th>Class</th> <th>Fee</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>Ali</td> <td>35</td> <td>7th</td> <td>2300rs</td>
+     </tr>
+     <tr>
+       <td>Ahmed</td> <td>12</td> <td>5th</td> <td>1300rs</td>
+     </tr>
+     <tr>
+       <td>Abdulah</td> <td>56</td> <td>9th</td> <td>3200rs</td>
+     </tr>
+     </tbody>
+    </table>
+   
+      "></iframe>
+
+      <h3>3. Don't be afraid when you see this</h3>
+      <p>Don't worry if you think you won't remember all this. Let me explain it to you step by step. Everything
+        starts with the &lt;table&gt; tag, and all content goes inside it. Then we have the header tag which
+        displays the column names like Name, RollNo, etc. This is the table head, so it goes in the &lt;thead&gt;
+        section. Inside thead, we have the &lt;tr&gt; tag - this stands for "table row" and defines what goes in
+        each row. Then we have &lt;th&gt; tags where we write what each column will contain, like Name, RollNo, etc.
+      </p>
+
+      <p>After the thead tag ends, the &lt;tbody&gt; tag begins. This is essentially the body of the table where all
+        the data appears, like Ali, 35, 7th, 2300, etc. Inside tbody, we have &lt;tr&gt; tags - these represent
+        rows. Then inside tr, we have &lt;td&gt; tags which represent table data, like Ali, 35, 7th, 2300rs, etc.
+        Each piece of data goes in its own td tag. If you need to add data for another student, you create another
+        tr tag with td tags inside it and add the student's data there.</p>
+
+      <p>I hope creating tables in HTML won't be difficult for you now. One thing I forgot to mention earlier - why
+        did we add border="1" in the table tag? The answer is that this adds borders around the table cells;
+        otherwise, the table looks very strange without any borders.</p>
+
+      <h3>4. Advanced Table</h3>
+      <p>Now imagine you need to create a table where you first want to display Roll No, and in the header you have
+        two columns - one for Roll No and another for Name. But in the Name column, you want to store two names -
+        first name and last name. How would you do that? Let's look at the example below.</p>
+
+      <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+    &lt;h2&gt;This is an Advanced Table&lt;/h2&gt;
+   &lt;table border="1"&gt; 
+    &lt;thead&gt;
+      &lt;tr&gt; 
+        &lt;th&gt;RollNo&lt;/th&gt; &lt;th colspan="2"&gt;Name&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+     &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;35&lt;/td&gt; &lt;td&gt;Ali&lt;/td&gt; &lt;td&gt;Haider&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;12&lt;/td&gt; &lt;td&gt;Ahmed&lt;/td&gt; &lt;td&gt;Shah&lt;/td&gt; 
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;56&lt;/td&gt; &lt;td&gt;Abdulah&lt;/td&gt; &lt;td&gt;Khubaib&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+   &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+      <div class="output-label">Output:</div>
+      <iframe class="auto-height-iframe" srcdoc="
+        <h1>This is an Advanced Table</h1>
+        <table border='1'> 
+    <thead>
+      <tr> 
+        <th>RollNo</th> <th colspan='2'>Name</th>
+      </tr>
+    </thead>
+     <tbody>
+      <tr>
+        <td>35</td> <td>Ali</td> <td>Haider</td>
+      </tr>
+      <tr>
+        <td>12</td> <td>Ahmed</td> <td>Shah</td> 
+      </tr>
+      <tr>
+        <td>56</td> <td>Abdulah</td> <td>Khubaib</td>
+      </tr>
+    </tbody>
+   </table>
+   
+      "></iframe>
+
+      <h3>5. Why did we use colspan="2"?</h3>
+      <p>This attribute tells the browser how many columns this particular cell should span. I specified 2, so it
+        spans across two columns.</p>
+
+      <h3>6. Another Problem</h3>
+      <p>Now let's say we need to display a person's name and their phone numbers - essentially creating a contact
+        information table. How would we create this? Let's look at the example code.</p>
+
+      <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+    &lt;h2&gt;This is another table&lt;/h2&gt;
+   &lt;table border="1"&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Name:&lt;/th&gt;
+            &lt;td&gt;Ali Ahmed&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th rowspan="2"&gt;Telephone:&lt;/th&gt;
+            &lt;td&gt;5558889997&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;5555988865&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+      <div class="output-label">Output:</div>
+      <iframe class="auto-height-iframe" srcdoc="
+        <h2>This is another table</h2>
+   <table border='1'>
+    <tbody>
+        <tr>
+            <th>Name:</th>
+            <td>Ali Ahmed</td>
+        </tr>
+        <tr>
+            <th rowspan='2'>Telephone:</th>
+            <td>5558889997</td>
+        </tr>
+        <tr>
+            <td>5555988865</td>
+        </tr>
+    </tbody>
+</table>
+   
+      "></iframe>
+      <h3>7. What's happening in this example?</h3>
+      <p>Understand this carefully. First, everything will go inside the table tag. Then comes the thead (table head),
+        where the main title of the table will go, and where colspan="2" is used, meaning it is taking up the space
+        of two columns. The thead tag then ends.
+        Next, the tbody (table body) tag starts. Here, the 'Name' is written in a th tag, and its data, which is
+        'Ali Ahmed', is given in a td tag.
+        Then a new tr (table row) starts. Here, an attribute is added inside the th tag, which is rowspan="2",
+        meaning it will take up the space of two rows. The first number is then written in a td tag. After that, a
+        new tr (row) is created where the second number is written. I hope you have understood it now.</p>
+      <h2>Practicals</h2>
+
+      <h3>Q1. You have to make a table for the given data.</h3>
+      <h3>1. Ali Ahmed Class 7th</h3>
+      <h3>2. Shahrukh Khan Class 9th</h3>
+      <h3>3. Abdul Rehman Class 10th</h3>
+      <h3>4. Amir Shah Class 8th</h3>
+      <h3>5. Lyaqat Khan Class 9th</h3>
+
+      <h3>Q2. Now write the same table in columns.</h3>
+
+    </div>
+    <div id="lesson5" class="lesson-section">
+      <h1>Lesson - 5: Detail about Input tags</h1>
+      <h3>1.How many types of input tags are there?</h3>
+      <p>There are 24 types of input tags, but we will learn about only a few of them. So let's get started. First of
+        all, we use the label tag with the input tag. It is necessary to use it, but even if you don't use it, it will
+        still work. However, you will understand its real use later on.</p>
+
+      <h3>2.Basic structure of Input Tag</h3>
+      <p>Its structure looks something like this:</p>
+      <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      <div class="output-label">Output:</div>
+      <iframe class="auto-height-iframe" srcdoc="
+        <label for='name'>Name:</label>
+        <input type='text' id='name'>
+      "></iframe>
+
+      <h3>3.What is this?</h3>
+      <p>Understand it this way: the label tag is connected with the input tag. You will understand its real use later
+        on. The label tag has an attribute called "for". In it, you write the same thing that is in the "id" attribute
+        of the input tag. That is, the names of "id" and "for" should be the same. And in the input, there is another
+        attribute called "type", and many types can come here, which we are going to learn about.</p>
+
+      <h3>4.First of all, an Advanced Thing</h3>
+      <p>If you add another attribute called "placeholder" inside the input tag, then write in it what you want to show.
+        Then when the user sees it, they will understand, and when they start typing, it will disappear. If you don't
+        understand, see for yourself.</p>
+      <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" placeholder="Enter your name"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      <div class="output-label">Output:</div>
+      <iframe class="auto-height-iframe" srcdoc="
+        <label for='name'>Name:</label>
+        <input type='text' id='name' placeholder='Enter your name'>
+      "></iframe>
+
+      <h3>5.Input type "tel"</h3>
+      <p>If you put "tel" instead of "text" in the type attribute of the input, it will take the user's phone number.
+        See below.</p>
+      <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+    &lt;label for="phone-num"&gt;Phone Number:&lt;/label&gt;
+    &lt;input type="tel" id="Phone-num" placeholder="Enter your Phone Number"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      <div class="output-label">Output:</div>
+      <iframe class="auto-height-iframe" srcdoc="
+         <label for='phone-num'>Phone Number:</label>
+    <input type='tel' id='Phone-num' placeholder='Enter your Phone Number'>
+      "></iframe>
+
+      <h3>6.Input type "email"</h3>
+      <p>This will take the user's email. See for yourself below.</p>
+      <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+    &lt;label for="Email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="Email" placeholder="Enter your Email"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      <div class="output-label">Output:</div>
+      <iframe class="auto-height-iframe" srcdoc="
+         <label for='Email'>Email:</label>
+    <input type='email' id='Email' placeholder='Enter your Email'>
+      "></iframe>
+
+      <h3>7.Input type "password"</h3>
+      <p>When we have to create something for the password so that the user can enter their password there, then we set
+        the input's type attribute to password. See below.</p>
+      <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+    &lt;label for="Password"&gt;Password:&lt;/label&gt;
+    &lt;input type="password" id="Password" placeholder="Enter your Password"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      <div class="output-label">Output:</div>
+      <iframe class="auto-height-iframe" srcdoc="
+         <label for='Password'>Password:</label>
+    <input type='password' id='Password' placeholder='Enter your Password'>
+      "></iframe>
+
+      <h3>8.Input type "date"</h3>
+      <p>Okay, if you want to take the user's date of birth, how will you take it? The answer is by setting the value of
+        the input's attribute to date. See below.</p>
+      <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+    &lt;label for="DOB"&gt;DOB:&lt;/label&gt;
+    &lt;input type="date" id="DOB" placeholder="Enter your DOB"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      <div class="output-label">Output:</div>
+      <iframe class="auto-height-iframe" srcdoc="
+         <label for='DOB'>DOB:</label>
+    <input type='date' id='DOB' placeholder='Enter your DOB'>
+      "></iframe>
+
+      <h3>9.Select and option Tags</h3>
+      <p>Now we will learn about select and option tags. Suppose you want to ask the user what their gender is, how will
+        they choose? For that, there are select and option tags. First, look at the example code, then we will talk.</p>
+      <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;h1&gt;Select your gender&lt;/h1&gt;
+    &lt;label for="gender"&gt;Gender:&lt;/label&gt;
+    &lt;select id="gender"&gt;
+      &lt;option value="male"&gt;Male&lt;/option&gt;
+      &lt;option value="female"&gt;Female&lt;/option&gt;
+      &lt;option value="other"&gt;Other&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      <div class="output-label">Output:</div>
+      <iframe class="auto-height-iframe" srcdoc="
+         <h1>Select your gender</h1>
+         <label for='gender'>Gender:</label>    
+         <select id='gender'>
+      <option>Male</option>
+      <option>Female</option>
+      <option>Other</option>
+    </select>
+      "></iframe>
+
+      <h3>10.What is happening here?</h3>
+      <p>Here too, we have used the label tag, and now we know about the select tag. Actually, it creates a thing where
+        there are options and the user can select them. Then option tags are created inside the select tag, in which
+        options are given. I think you have understood now. By the way, I have given a value in every option tag so that
+        when the user finally submits, the data will be set according to the value.</p>
+
+      <h3>11.Input type "radio"</h3>
+      <p>Now suppose a person is taking a subscription to something. They will either take basic, or premium, or vip.
+        They cannot take all at once. Now we will see about this. You look at an example code below.</p>
+      <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;h1&gt;Select your Plan&lt;/h1&gt;
+  &lt;input type="radio" id="basic" value="basic" name="subscription"&gt; 
+  &lt;label for="basic"&gt;Basic&lt;/label&gt;
+  &lt;input type="radio" id="premium" value="premium" name="subscription"&gt; 
+  &lt;label for="premium"&gt;Premium&lt;/label&gt;
+  &lt;input type="radio" id="vip" value="vip" name="subscription"&gt; 
+  &lt;label for="vip"&gt;VIP&lt;/label&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      <div class="output-label">Output:</div>
+      <iframe class="auto-height-iframe" srcdoc="
+         <h1>Select your Plan</h1>
+         <input type='radio' id='basic' value='basic' name='subscription'>
+         <label for='basic'>Basic</label>
+         <input type='radio' id='premium' value='premium' name='subscription'>
+         <label for='premium'>Premium</label>
+         <input type='radio' id='vip' value='vip' name='subscription'>
+         <label for='vip'>VIP</label>
+      "></iframe>
+
+      <h3>12.What is happening here?</h3>
+      <p>Here you will understand the real use of the label. Actually, first, input type was given as radio, then id was
+        given as basic, then value was given as basic, then name was given as subscription, which was given the same for
+        all. Now understand why the name was given? It was given because all inputs had the same name, so according to
+        the rule, only one name will be selected. So you have understood half the logic. Now, why was the value given?
+        So that when the user selects this, what value should be stored? So now you all have understood. Then in the
+        label, in the "for", that value was given which was in the "id" attribute of the input. Now if the user clicks
+        on the text too, that option will be selected because that text is labeled with the input. I am sure you have
+        understood everything.</p>
+
+      <h3>13.Input type "checkbox"</h3>
+      <p>Now whenever you install any app, you see that "I agree to the terms and conditions" appears in front of you,
+        and you have to check it to proceed. This is also the same. See for yourself below.</p>
+      <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;input type="checkbox" id="term"&gt;
+   &lt;label for="term"&gt;I agree to the terms and condition&lt;/label&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      <div class="output-label">Output:</div>
+      <iframe class="auto-height-iframe" srcdoc="
+        <input type='checkbox' id='term'>
+         <label for='term'>I agree to the terms and condition</label>
+      "></iframe>
+
+      <h3>14.What is textarea tag</h3>
+      <p>Understand it this way: in this, the user can write anything. Its example is below. But in this, you can also
+        use the "rows" attribute to determine how many rows it should have, and you can also use the "cols" attribute to
+        determine how many columns it should have.</p>
+      <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;textarea placeholder="Enter your comment!" rows="5"&gt;&lt;/textarea&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      <div class="output-label">Output:</div>
+      <iframe class="auto-height-iframe" srcdoc="
+        <textarea placeholder='Enter your comment!' rows='5'></textarea>
+      "></iframe>
+
+      <h3>What is the type attribute inside the button tag?</h3>
+      <p>When you want to store all the data in a file, you can use type="submit" inside the button.</p>
+
+      <h2>Project Number 1</h2>
+      <h3>We are creating a project that will take data from the user and store it in a file called main.php. Actually,
+        it won't happen like that; you will have to learn PHP, but we can see it as an example. Here we will use the
+        form tag, inside which all other tags will come, and we will use the "required" attribute in every input and
+        select tag, which will show that this thing must be filled, otherwise the data will not be submitted. Remember,
+        every input is coming in its own div tag, that is, everyone has their own div tag. Here you will also learn how
+        to use the div tag.</h3>
+      <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+&lt;form action="main.php"&gt;
+   &lt;!-- Input type="text" to take Name from user --&gt;
+   &lt;div&gt;
+     &lt;label for="name"&gt;Name:&lt;/label&gt;
+     &lt;input type="text" id="name" placeholder="Enter your name" required&gt;
+   &lt;/div&gt;
+   &lt;!-- Input type="tel" to take Phone Number from user --&gt;
+   &lt;div&gt;
+     &lt;label for="phone-num"&gt;Phone Number:&lt;/label&gt;
+     &lt;input type="tel" id="Phone-num" placeholder="Enter your Phone Number" required&gt;
+   &lt;/div&gt;
+   &lt;!-- Input type="password" to take Password from user --&gt;
+   &lt;div&gt;
+     &lt;label for="Password"&gt;Password:&lt;/label&gt;
+     &lt;input type="password" id="Password" placeholder="Enter your Password" required&gt;
+   &lt;/div&gt;
+   &lt;!-- Input type="date" to take Date of Birth from user --&gt;
+   &lt;div&gt;
+     &lt;label for="DOB"&gt;DOB:&lt;/label&gt;
+     &lt;input type="date" id="DOB" placeholder="Enter your DOB" required&gt;
+   &lt;/div&gt;
+   &lt;!-- To take user's gender --&gt;
+   &lt;div&gt;
+     &lt;h1&gt;Select your gender&lt;/h1&gt;
+      &lt;label for="gender"&gt;Gender:&lt;/label&gt;
+      &lt;select id="gender" required&gt;
+        &lt;option value="male"&gt;Male&lt;/option&gt;
+        &lt;option value="female"&gt;Female&lt;/option&gt;
+        &lt;option value="other"&gt;Other&lt;/option&gt;
+      &lt;/select&gt;
+   &lt;/div&gt;
+    &lt;!-- Input type="radio" to take user's plan --&gt;
+    &lt;div&gt;
+      &lt;h1&gt;Select your Plan&lt;/h1&gt;
+      &lt;input type="radio" id="basic" value="basic" name="subscription"&gt; 
+      &lt;label for="basic"&gt;Basic&lt;/label&gt;
+     &lt;input type="radio" id="premium" value="premium" name="subscription" required&gt; 
+     &lt;label for="premium"&gt;Premium&lt;/label&gt;
+     &lt;input type="radio" id="vip" value="vip" name="subscription" required&gt;
+     &lt;label for="vip"&gt;VIP&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;!-- Input type="checkbox" to get agreement from user --&gt;
+  &lt;div&gt;
+    &lt;input type="checkbox" id="term" required&gt;
+     &lt;label for="term"&gt;I agree to the terms and condition&lt;/label&gt;
+  &lt;/div&gt;
+   &lt;!-- Use of textarea Tag to take Comment from user --&gt;
+ &lt;div&gt;
+   &lt;label for="comment"&gt;Comment&lt;/label&gt;
+   &lt;textarea id="comment" placeholder="Enter your comment!" rows="5"&gt;&lt;/textarea&gt;
+ &lt;/div&gt;
+   &lt;!-- Everything will be submitted to a file by clicking this button! --&gt;
+  &lt;div&gt;
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      <div class="output-label">Output:</div>
+      <iframe class="auto-height-iframe" srcdoc="
+   <!-- Input type='text' to take Name from user -->
+   <div>
+     <label for='name'>Name:</label>
+     <input type='text' id='name' placeholder='Enter your name' required>
+   </div>
+   <!-- Input type='tel' to take Phone Number from user -->
+   <div>
+     <label for='phone-num'>Phone Number:</label>
+     <input type='tel' id='Phone-num' placeholder='Enter your Phone Number' required>
+   </div>
+   <!-- Input type='password' to take Password from user -->
+   <div>
+     <label for='Password'>Password:</label>
+     <input type='password' id='Password' placeholder='Enter your Password' required>
+   </div>
+   <!-- Input type='date' to take Date of Birth from user -->
+   <div>
+     <label for='DOB'>DOB:</label>
+     <input type='date' id='DOB' placeholder='Enter your DOB' required>
+   </div>
+   <!-- To take user's gender -->
+   <div>
+     <h1>Select your gender</h1>
+      <label for='gender'>Gender:</label>
+      <select id='gender' required>
+        <option value='male'>Male</option>
+        <option value='female'>Female</option>
+        <option value='other'>Other</option>
+      </select>
+   </div>
+    <!-- Input type='radio' to take user's plan -->
+    <div>
+      <h1>Select your Plan</h1>
+      <input type='radio' id='basic' value='basic' name='subscription'> 
+      <label for='basic'>Basic</label>
+     <input type='radio' id='premium' value='premium' name='subscription' required> 
+     <label for='premium'>Premium</label>
+     <input type='radio' id='vip' value='vip' name='subscription' required>
+     <label for='vip'>VIP</label>
+  </div>
+  <!-- Input type='checkbox' to get agreement from user -->
+  <div>
+    <input type='checkbox' id='term' required>
+     <label for='term'>I agree to the terms and condition</label>
+  </div>
+   <!-- Use of textarea Tag to take Comment from user -->
+ <div>
+   <label for='comment'>Comment</label>
+   <textarea id='comment' placeholder='Enter your comment!' rows='5'></textarea>
+ </div>
+   <!-- Everything will be submitted to a file by clicking this button! -->
+  <div>
+    <button type='submit'>Submit</button>
+  </div>
+      "></iframe>
+      <h2>Practicals</h2>
+      <h3>Q1. Make a project where you use all the input types that you have learned so far.</h3>
+    </div>
+    <div id="lesson1" class="lesson-section">
+    <h1>6. What is SEO (Search Engine Optimization)</h1>
+<p>Whenever we create a website, we want it to appear on Google or any other search engine. But this is only possible when we do proper SEO for our website. SEO means Search Engine Optimization. These are the methods that make our website better for search engines so that it appears at the top.</p>
+
+<h3>Why is SEO important?</h3>
+<p>If you want people to easily reach your website, then doing SEO is very important. Without SEO, your website goes down in search results and people cannot find it easily.</p>
+
+<h3>Basic points of SEO</h3>
+<ul>
+  <li>Always keep the <b>title</b> of your website unique and clear.</li>
+  <li>Write a proper <b>meta description</b> so Google can understand what your page is about.</li>
+  <li>Use <b>keywords</b> that people usually search for.</li>
+  <li>Make sure your website loads fast.</li>
+  <li>Always write an <b>alt</b> attribute in your images.</li>
+</ul>
+
+<h3>Example</h3>
+<pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My Awesome Website&lt;/title&gt;
+    &lt;meta name="description" content="This website teaches HTML in Urdu and English in a very simple way."&gt;
+    &lt;meta name="keywords" content="HTML, Urdu HTML, Learn HTML, Web Design"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+    &lt;p&gt;This is an example of SEO in HTML.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h3>Explanation</h3>
+<p>In this example, we used meta tags inside the head section. The <b>name="description"</b> attribute tells Chrome or any browser what our website is about, and in the <b>content</b> we write a short explanation. The <b>name="keywords"</b> attribute tells the browser that if someone searches for these specific words (for example, “Learn HTML in Urdu”), our website should appear in the results.</p>
+
+<h3>Use of header, main, and footer tags in SEO</h3>
+<p>We can divide a website into three parts: <b>Header</b>, <b>Main Body</b>, and <b>Footer</b>. Let’s understand how to use them. For example, on the top of this website, you can see the title “Full HTML Course by Raja Najaf Khan” and some buttons these are inside the <b>header</b> tag. The main lessons you are reading are inside the <b>main</b> tag, and inside the main tag we use <b>section</b> tags to divide the content into smaller parts. For example, I have used 6 sections in this course. In the <b>footer</b> tag, we usually write information about ourselves, add our YouTube link, or copyright text.</p>
+
+<pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;header&gt;
+     &lt;!-- Here you can write your website title or anything you want to show at the top --&gt;
+   &lt;/header&gt;
+   &lt;main&gt;
+     &lt;!-- This is where the main content will appear --&gt;
+       &lt;section&gt;
+         &lt;!-- You can divide your content into multiple sections --&gt;
+       &lt;/section&gt;
+   &lt;/main&gt;
+   &lt;footer&gt;
+   &lt;!-- Here you can add your YouTube link, other links, or copyright text --&gt;
+   &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2>Congratulations!</h2>
+<h3>If you have come this far and you have understood everything well, then you have learned HTML and now you can
+        move forward to CSS or JS.</h3>
+</div>
+  </div>
+
+  <footer>© 2025 HTML Course by Najaf</footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+
+      function resizeIframe(iframe) {
+        if (iframe.contentWindow && iframe.contentDocument) {
+
+          let body = iframe.contentDocument.body;
+          if (body) {
+
+            let newHeight = body.scrollHeight + 20;
+
+            iframe.style.height = newHeight + 'px';
+          }
+        }
+      }
+
+      const iframes = document.querySelectorAll('iframe');
+
+      iframes.forEach(iframe => {
+
+        iframe.onload = function () {
+          resizeIframe(iframe);
+        };
+
+        resizeIframe(iframe);
+      });
+    });
+    document.querySelectorAll('.lesson-link').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        window.scrollTo({
+          top: targetElement.offsetTop - 20,
+          behavior: 'smooth'
+        });
+      });
+    });
+    document.getElementById('languageBtn').addEventListener('click', function () {
+      window.location.href = 'language-selecter.html';
+    });
+  </script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/PNG" href="RNK.PNG">
+  <title>Full HTML Course by Najaf</title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: white;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      margin-top: 0;
+      background: #0078d7;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    header {
+      margin-top: 0;
+      background: linear-gradient(to right, rgb(67, 67, 126), blue, rgb(60, 60, 124));
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+      position: relative;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      margin: 15px auto;
+    }
+
+    h2 {
+      color: #0078d7;
+      border-bottom: 2px solid #0078d7;
+      padding-bottom: 5px;
+    }
+
+    h3 {
+      color: #444;
+    }
+
+    pre {
+      background: #272822;
+      color: white;
+      border-radius: 10px;
+      overflow-x: auto;
+      padding: 10px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    iframe {
+      width: 100%;
+      height: auto;
+      min-height: 100px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    .lesson {
+      margin-bottom: 40px;
+    }
+
+    .output-label {
+      font-weight: bold;
+      color: #0078d7;
+      margin-top: 10px;
+      display: inline-block;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+      margin-top: 30px;
+      font-size: 0.9rem;
+    }
+
+    /* Navigation Styles */
+    .lesson-nav {
+      background: #f5f5f5;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .lesson-nav h3 {
+      margin-top: 0;
+      color: #0078d7;
+    }
+    
+    .lesson-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .lesson-link {
+      display: inline-block;
+      background: #0078d7;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    
+    .lesson-link:hover {
+      background: #005a9e;
+    }
+    
+    .lesson-section {
+      scroll-margin-top: 20px;
+    }
+    
+    /* Language Selector Button */
+    .language-selector-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #ff9800;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    
+    .language-selector-btn:hover {
+      background: #e68900;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    
+    .language-selector-btn:active {
+      transform: translateY(0);
+    }
+
+    @media only screen and (max-width: 480px) {
+      .container {
+        padding: 10px;
+        margin: 10px auto;
+      }
+
+      header,
+      h1 {
+        font-size: 1.5rem;
+        padding: 15px;
+      }
+      
+      .lesson-links {
+        gap: 5px;
+      }
+      
+      .lesson-link {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+      }
+      
+      .language-selector-btn {
+        position: static;
+        margin-top: 10px;
+        display: block;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>Full HTML Course by Raja Najaf Khan
+    <button class="language-selector-btn" id="languageBtn">Language Selector</button>
+  </header>
+  <div class="container">
+      <div class="lesson-nav">
+      <h3>Jump to Lesson:</h3>
+      <div class="lesson-links">
+        <a href="#lesson1" class="lesson-link">Lesson 1</a>
+        <a href="#lesson2" class="lesson-link">Lesson 2</a>
+        <a href="#lesson3" class="lesson-link">Lesson 3</a>
+        <a href="#lesson4" class="lesson-link">Lesson 4</a>
+        <a href="#lesson5" class="lesson-link">Lesson 5</a>
+      </div>
+    </div>
+      <br>
+    <div id="lesson1" class="lesson-section">
+    <h1>Lesson - 1: Introduction to HTML</h1>
+    <h2>Lesson 1: Introduction to HTML</h2>
+    <h3>1.What is HTML CSS JS</h3>
+    <p>Sab se pehle to HTML ks full form hota hai <b>Hyper Text Markup Language</b>. Or CSS ka full form hota hai
+      <b>Cascading Style Sheets</b>. Or JS ka full form hota hai <b>Java Script</b>. Ab ham samajte hai ke in sab ka kam
+      kya hai.
+    </p>
+    <h4>1.HTML</h4>
+    <p>HTML ka kam hota hai website ka structure banana.</p>
+    <h4>2.CSS</h4>
+    <p>CSS ka kam hota hai website ko khobsorat banana.</p>
+    <h4>3.JS</h4>
+    <p>JS ka kam hota hai website main functions add karna.</p>
+    <h3>2.Easy Example os HTML CSS JS Use</h3>
+    <p>Ab log sab se pehle ek ghar ki taraf dekho ke sab se pehle os ka structure banta hai jo ke photo.1 main nazar a
+      raha hai phir is ko khobsorat banane ke lye is main paints kye jate hai.Ab is main kon sa button dabane par light
+      chale gi konsa button dabane par fan chale ga ye sab functions add karne ke lye ham JS add karte hai.Basicaly asal
+      main koch or hota hai kahi ap sach na samajna khair ye bohot hi easy example thi.</p>
+
+    <h3>3.Website kam kese karti hai?</h3>
+    <p>Darasal chrome html ko parta hai or os hisab se website ban jati hai jesa mene kaha HTML use hota hai structure
+      bnane ke lye CSS style dene ke lye or JS function add karne ke lye.</p>
+
+    <h3>4.Tags kya hote hai?</h3>
+    <p>Ap logo ko boilerplate of HTML ke bare main pata hoga khair os main ap ko tags nazar aye ge kuch ese
+      <b>&lt;!DOCTYPE html&gt;</b> Ye bhi ek tag hai or <b>&lt;html&gt;</b> ye bhi ek tag hai jis ka ek ending tag hai
+      <b>&lt;/html&gt;</b> ab hota yo hai ke har tag apna ek specific kam kar raha hai for example
+      <b>&lt;h1&gt;Hi&lt;/h1&gt;</b> ye h1 tag hai or is ka kam hota hai heading ko screen main print karna jo bold hota
+      hai or thora bara hota hai ab mujhe yaqen hai ke ap ko pata chal gya hoga ke tags kya hote hai.Abhi ham ye jante
+      hai ke boilerplate main jo tags dikhaye gaye hai wo kya kam karte hai.
+    </p>
+    <h2>1.1.Boilerplate of HTML</h2>
+    <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+    <h3>1.Use of &lt;!DOCTYPE html&gt;</h3>
+    <p>Ye darasal chrome ko ye batata hai ke ham advance html use kar rahe hai jo ke hai <b>HTML5</b></p>
+    <h3>2.Use of &lt;html lang="en"&gt;</h3>
+    <p>Is ka use is tarha ho raha hai ke html ke andar ek attribute hai lang="en" jo ye batata hai ke is ki language
+      english hone wali hai or khair html ke andar hi sara content ata hai.</p>
+    <h3>3.Use of &lt;head&gt;</h3>
+    <p>Is ke andar wo chize ati hai jo ke kuch kam to kare gi par website ke opar print nhi hogi ye agge ja kar dekhe ge
+      ke is ke andar ki chizo ka kya use hai. Abhi filhal ap <b>meta</b> tag ko chor do wo agge ja kar dekhe ge</p>
+    <h3>4.Use of &lt;title&gt;</h3>
+    <p>Ye use hota hai hamare website ka title dikhane ke lye joke main page par nazar nhi ata hai.</p>
+    <h3>5.Use of &lt;body&gt;</h3>
+    <p>Is main wo content aye ga jo main page par show karwana hai.</p>
+    <h2>1.2.Type of Tags</h2>
+    <p>Tags ki 2 types hoti hai <b>Paired Tags</b> and <b>Unpaired Tags</b></p>
+    <h3>1.Paired Tagss</h3>
+    <p>Ye wo tags hote hai jin ka ek opening tag hota hai or ek closing tag like:
+      <b>&lt;tagName&gt;Anything&lt;/tagName&gt;</b>
+    </p>
+    <h3>2.Unpaired Tags</h3>
+    <p>Wo tag jinho ke opening tag to hota hai par closing tag nhi hota like : <b>&lt;tagName&gt;</b> Khair in sab ke
+      bare main ham agge chal kar sikhe ge. Abhi ham kuch tags sikhe ge darasal tags bohot sare hote hai par hame sirf
+      wo sikhne hote hai jo important hote hai or har jagah use hote hai to abhi ham milte hai Lesson Number 2 main.</p>
+    </div>
+    <div id="lesson2" class="lesson-section">
+    <h1>Lesson - 2: Learn about same tags</h1>
+    <h3>Comments</h3>
+    <p>Tags ke bare main janne se pehle commments ke bare main jan lo ke comments kya hote hai darasal ham body tag ke
+      andar jo kuch bhi likhe wo print hota hai par hame kuch aisa likhna ho ke jo hamara code dekh raha ho to wo dekh
+      le yani comments par le os main likhe hoye to ham comments ka use karte hai or os ka structure kuch aisa hota hai
+    </p>
+    <p><b>&lt;!-- Anything here --&gt;</b></p>
+    <h3>1.Paragraph Tag</h3>
+    <p>paragraph tag ek paired tag hota hai or is ke beach main jo likha jaye wo paragraph ki form main show hoga jis ki
+      ek example niche hai</p>
+    <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;Hi this is a paragraph tag.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+    <div class="output-label">Output:</div>
+    <iframe class="auto-height-iframe" srcdoc="
+        <p>Hi this is a paragraph tag.</p>
+      "></iframe>
+    <h3>2.Heading Tags</h3>
+    <p>Heading ke 6 tags hote hai jo niche dikhaye gaye hai</p>
+    <b>&lt;h1&gt;Anything&lt;/h1&gt;</b>
+    <b>&lt;h2&gt;Anything&lt;/h2&gt;</b>
+    <b>&lt;h3&gt;Anything&lt;/h3&gt;</b>
+    <b>&lt;h4&gt;Anything&lt;/h4&gt;</b>
+    <b>&lt;h5&gt;Anything&lt;/h5&gt;</b>
+    <b>&lt;h6&gt;Anything&lt;/h6&gt;</b>
+    <p>In sab ka pehle to ap example dekhe</p>
+    <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Heading 1&lt;/h1&gt;
+  &lt;h2&gt;Heading 2&lt;/h2&gt;
+  &lt;h3&gt;Heading 3&lt;/h3&gt;
+  &lt;h4&gt;Heading 4&lt;/h4&gt;
+  &lt;h5&gt;Heading 5&lt;/h5&gt;
+  &lt;h6&gt;Heading 6&lt;/h6&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+    <div class="output-label">Output:</div>
+    <iframe class="auto-height-iframe" srcdoc="
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+      "></iframe>
+    <h3>3.Use of Heading tags</h3>
+    <p>Agar ap ko kisi chiz par note likhna par gya jese ek chiz ke opar note niche likha hoa hai to os main kya hota
+      hai ek main heading phir os ke points phir os ke points ke points likhe jate hai.</p>
+    <h3>3.span tag ka use</h3>
+    <p>span tag ko bhi ap ek p tag hi samjo kyo ke ye bhi text print karta hai or p tag bhi bas Difference ye hai ke p
+      tag apne agge ki sari jagah ko le leta hai jese mene ek p tag banaya Hi dosra banaya Whats Up to dosre text niche
+      a jaye ga par span main esa nhi hota hai darasal p ek block element hota hai or span inline tag hota hai. in ki
+      list bohot bari hoti hai ap kidhr bhi ja kar dekh sakte hai inline or block tags kon kon se hote hai in ki ek
+      example niche di gayi hai.</p>
+    <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;Hi&lt;/p&gt;
+  &lt;p&gt;Guys!&lt;/p&gt;
+  &lt;span&gt;Hi&lt;/span&gt;
+  &lt;span&gt;Guys!&lt;/span&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+    <div class="output-label">Output:</div>
+    <iframe class="auto-height-iframe" srcdoc="
+        <p>Hi</p>
+        <p>Guys</p>
+        <span>Hi</span>
+        <span>Guys!</span>
+      "></iframe>
+    <h3>4.br Tag</h3>
+    <p>br ek unpaired tag hota hai or ye ek line break create karta hai jis ki example niche hai</p>
+    <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;p&gt;Hi this is a&lt;br&gt;Br tag.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+    <div class="output-label">Output:</div>
+    <iframe class="auto-height-iframe" srcdoc="
+        <p>Hi this is a<br>Br tag.</p>
+      "></iframe>
+    <h3>5.hr Tag</h3>
+    <p>Ye bhi ek unpaired tag hai or ye line to break karta hai par ek line bhi bana deta hai jis ki example niche hai.
+    </p>
+    <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;p&gt;Hi this is a&lt;/p&gt;
+   &lt;hr&gt;
+   &lt;p&gt;Hr tag.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+    <div class="output-label">Output:</div>
+    <iframe class="auto-height-iframe" srcdoc="
+        <p>Hi this is a</p>
+        <hr>
+        <p>Hr tag</p>
+      "></iframe>
+    <h3>6. b, i, u and strong Tags</h3>
+    <p>Ye darasal text ko design de dete hai jis ki example niche hai.</p>
+    <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;p&gt;This is &lt;b&gt;bold text&lt;/b&gt;.&lt;/p&gt;
+   &lt;p&gt;This is &lt;strong&gt;important text&lt;/strong&gt;.&lt;/p&gt;
+   &lt;p&gt;This is &lt;i&gt;italic text&lt;/i&gt;.&lt;/p&gt;
+   &lt;p&gt;This is &lt;u&gt;underlined text&lt;/u&gt;.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    <div class="output-label">Output:</div>
+    <iframe class="auto-height-iframe" srcdoc="
+        <p>This is <b>bold text</b>.</p>
+        <p>This is <strong>important text</strong>.</p>
+        <p>This is <i>italic text</i>.</p>
+        <p>This is <u>underlined text</u>.</p>
+      "></iframe>
+    <h3>7.Anchor Tag</h3>
+    <p>Anchor Tag ko &lt;a&gt; se zahir kya jata hai is ka proper structure hota hai: <b>&lt;a
+        href="Any-Link"&gt;AnyText&lt;/a&gt;</b>. Is main a ke andar href hai jise attribute kehte hai wo attribute jo
+      ek tag
+      ke andar ate hai ye bhi ek specific kam karte hai ab a tag ka ye kam hai ke is main pehle to koy link dali jaye
+      ban main kuch bhi likha jaye koy word bhi ab jab user os word ko dabaye ga to wo os link main ponch jaye ga is ki
+      ek example niche di gayi hai. khair drc ke sath ek or attribute use kya gya hai jo hai target to is ke andar
+      likha hoa hai _blank matlab ye is tarha kare ga ke link ko alag tab main open kare ga</p>
+    <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;a href="https://www.google.com" target="_blank"&gt;&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    <div class="output-label">Output:</div>
+    <iframe class="auto-height-iframe" srcdoc="
+        <a href='https://www.google.com' target='_blank'>Google</a>
+      "></iframe>
+    <h3>8.div Tag</h3>
+    <p>div tag ke bare main ap ko agge chal zyada ache se samaj aye ga darasal is ke andar kayi sare tags a sakte hai or
+      ye ek block type element hai is ki example dene ki zarorat ni hai ham log jab is keopar detail se pare ge to
+      example de de ge.</p>
+    <h3>8.button Tag</h3>
+    <p>Is ke name se hi pata chalta hai ke ye button print kare ga ao example main dekh lo.</p>
+    <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;p&gt;This is an Button&lt;/p&gt;
+   &lt;button&gt;Click Me!&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    <div class="output-label">Output:</div>
+    <iframe class="auto-height-iframe" srcdoc="
+        <p>This is an Button</p>
+        <button>Click Me!</button>
+      "></iframe>
+    <h3>10.Last thing</h3>
+    <p>Is chapter main ham logo ne common common tags ke bare main par lya ab ham agle Lesson par jaye ge so lets move
+      to the Lesson 3</p>
+      </div>
+      <div id="lesson3" class="lesson-section">
+    <h1>Lesson - 3: Lists</h1>
+    <h3>1.Starting</h3>
+    <p>Man lo ap ko kafi sari chizo ki list dikhani hai to HTML main kese dikhao ge to is ke lye hote hai 3 tags
+      <b>1.&lt;ol&gt;&lt;/ol&gt; 2.&lt;ul&gt;&lt;/ul&gt; 3.&lt;dl&gt;&lt;dl&gt;</b>
+    </p>
+    <h3>1.Ordered List</h3>
+    <p>Ordered list main sab se pehle likhte hai ol tag phir os ke andar li tag likhte hai li ka matlab hai list jo
+      dikhani hai ab is ki example niche di gayi hai.</p>
+    <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;p&gt;This is an Order List&lt;/p&gt;
+   &lt;ol&gt;
+       &lt;li&gt;Boil Water: Take one cup of water in a pan.&lt;li&gt;
+       &lt;li&gt;Add Basics: Put in sugar (to taste) and tea leaves (one teaspoon).&lt;/li&gt;
+       &lt;li&gt;Crush Spices: Crush ginger (or cardamom) and add it to the water.&lt;/li&gt;
+       &lt;li&gt;Let it Boil: Let the mixture boil well for about 2-3 minutes. This gets the flavour out.&lt;/li&gt;
+       &lt;li&gt;Add Milk: Pour in the milk.&lt;/li&gt;
+       &lt;li&gt;Simmer Gently: Let it simmer (boil slowly) for another 1-2 minutes.&lt;/li&gt;
+       &lt;li&gt;Strain It: Turn off the gas and strain the tea into a cup.&lt;/li&gt;
+       &lt;li&gt;Enjoy Hot: Your hot tea is ready! Enjoy it with a biscuit.&lt;/li&gt;
+    &lt;/ol&gt;   
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    <div class="output-label">Output:</div>
+    <iframe class="auto-height-iframe" srcdoc="
+    <p>This is an Order List</p>
+
+      <ol>
+       <li>Boil Water: Take one cup of water in a pan.</li>
+       <li>Add Basics: Put in sugar (to taste) and tea leaves (one teaspoon).</li>
+       <li>Crush Spices: Crush ginger (or cardamom) and add it to the water.</li>
+       <li>Let it Boil: Let the mixture boil well for about 2-3 minutes. This gets the flavour out.</li>
+       <li>Add Milk: Pour in the milk.</li>
+       <li>Simmer Gently: Let it simmer (boil slowly) for another 1-2 minutes.</li>
+       <li>Strain It: Turn off the gas and strain the tea into a cup.</li>
+       <li>Enjoy Hot: Your hot tea is ready! Enjoy it with a biscuit.</li>
+      </ol>   
+      "></iframe>
+    <h3>2.Unordered List</h3>
+    <p>Ye wo list hoti hai jis main order maine nhi rakhta jaise shoping list hoti hai os main koy order nhi hota ke
+      pehle ye lena hai phir ye lena hai balke jo mil jaye bas wo lena hota hai is ko ul tag ke andar li tag ki form
+      main likhte hai example niche di gayi hai.</p>
+    <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;p&gt;This is an Unordered List&lt;/p&gt;
+   &lt;ul&gt;
+     &lt;li&gt;Milk&lt;/li&gt;
+     &lt;li&gt;Bread&lt;/li&gt;
+     &lt;li&gt;Eggs&lt;/li&gt;
+     &lt;li&gt;Potatoes&lt;/li&gt;
+     &lt;li&gt;Onions&lt;/li&gt;
+     &lt;li&gt;Tea Powder&lt;/li&gt;
+     &lt;li&gt;Biscuits&lt;/li&gt;
+     &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    <div class="output-label">Output:</div>
+    <iframe class="auto-height-iframe" srcdoc="
+        <p>This is an Unordered List</p>
+   <li>Milk</li>
+   <li>Bread</li>
+   <li>Eggs</li>
+   <li>Potatoes</li>
+   <li>Onions</li>
+   <li>Tea Powder</li>
+   <li>Biscuits</li>
+      "></iframe>
+    <h3>3.Defination List</h3>
+    <p>Is ke name se hi pata chal raha hai ki kisi ki defination dikhane ke lye ye use hoga is ko likhne ka tariqa thora
+      alag hai.Sab se pehle dl tag dale ge phir os ke andar dt tag dale ge jo ke ek word ko le ga phir dd tag main ham
+      os ki detail matlab defination dale ge.Jis ki ek example nice hai.</p>
+    <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;p&gt;This is an Defination List&lt;/p&gt;
+  &lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;HyperText Markup Language is a simple language to create a webpage.&lt;/dd&gt;
+  &lt;dt&gt;Chemistry&lt;/dt&gt;
+  &lt;dd&gt;Chemistry is the scientific study of matter and the changes it undergoes.&lt;/dd&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;Physics is the natural science that studies matter, energy, space, and time, and how they relate to one another.&lt;/dd&gt;
+  &lt;/dl&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    <div class="output-label">Output:</div>
+    <iframe class="auto-height-iframe" srcdoc="
+        <p>This is an Defination List</p>
+        <dl>
+  <dt>HTML</dt>
+  <dd>HyperText Markup Language is a simple language to create a webpage.</dd>
+  <dt>Chemistry</dt>
+  <dd>Chemistry is the scientific study of matter and the changes it undergoes.</dd>
+  <dt>HTML</dt>
+  <dd>Physics is the natural science that studies matter, energy, space, and time, and how they relate to one another.</dd>
+  </dl>
+   
+      "></iframe>
+      </div>
+      <div id="lesson4" class="lesson-section">
+    <h1>Lesson - 4: Table</h1>
+    <h3>1.Table ka kya use hota hai HTML main?</h3>
+    <p>Is ka use is lye hota hai ke kisi ke data ko dikhana ho table ki form main dikhate hai chalo mano ke students ka
+      data hai sab se pehle on ka name likha hoga agge on ki age phir agge class phir agge fee to is ko table ki form
+      main dikhate hai or waha kafi sara data ata hai.</p>
+    <h3>2.Table ko kese banaye?</h3>
+    <p>Is ki shorowat table tag se hoti hai or sara kuch isi ke andar ata hai phir is ke head se shoro kare ge jo hoga
+      &lt;thead&gt; ye paired tag hota hai is main sab se pehle likha jaye ga Name RollNO Class Fee phir ata hai
+      &lt;tbody&gt; yaha phir sare students ka data likha jaye ga jese Ali 35 7th 2300rs or bhi students ho ge ab in ko
+      ese hi nhi likh sakte in ko likhne ka ek tariqa ho ga jo niche example code main dikhaya gya hai.</p>
+    <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;h2&gt;This is an Table&lt;/h2&gt;
+  &lt;table&gt;
+   &lt;thead&gt;
+     &lt;tr&gt; 
+       &lt;th&gt;Name&lt;/th&gt; &lt;th&gt;RollNo&lt;/th&gt; &lt;th&gt;Class&lt;/th&gt; &lt;th&gt;Fee&lt;/th&gt;
+     &lt;/tr&gt;
+   &lt;/thead&gt;
+   &lt;tbody&gt;
+     &lt;tr&gt;
+       &lt;td&gt;Ali&lt;/td&gt; &lt;td&gt;35&lt;/td&gt; &lt;td&gt;7th&lt;/td&gt; &lt;td&gt;2300rs&lt;/td&gt;
+     &lt;/tr&gt;
+     &lt;tr&gt;
+       &lt;td&gt;Ahmed&lt;/td&gt; &lt;td&gt;12&lt;/td&gt; &lt;td&gt;5th&lt;/td&gt; &lt;td&gt;1300rs&lt;/td&gt;
+     &lt;/tr&gt;
+     &lt;tr&gt;
+       &lt;td&gt;Abdulah&lt;/td&gt; &lt;td&gt;56&lt;/td&gt; &lt;td&gt;9th&lt;/td&gt; &lt;td&gt;3200rs&lt;/td&gt;
+     &lt;/tr&gt;
+   &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    <div class="output-label">Output:</div>
+    <iframe class="auto-height-iframe" srcdoc="
+    <h2>This is an Table</h2>
+    <table border='1'>
+        <thead>
+     <tr> 
+       <th>Name</th> <th>RollNo</th> <th>Class</th> <th>Fee</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>Ali</td> <td>35</td> <td>7th</td> <td>2300rs</td>
+     </tr>
+     <tr>
+       <td>Ahmed</td> <td>12</td> <td>5th</td> <td>1300rs</td>
+     </tr>
+     <tr>
+       <td>Abdulah</td> <td>56</td> <td>9th</td> <td>3200rs</td>
+     </tr>
+     </tbody>
+    </table>
+   
+      "></iframe>
+    <h3>3.Darna mat is ko dekh kar</h3>
+    <p>Ha bhai is ko dekh kar darna mat ke tumhe ye yad nhi ho paye ga main samjata ho tumhe dekho shorowat hoti hai
+      table tag se sara kuch is ke andar ana hai phir os ke baad head tag lagta hai jo ke name RollNo dikhata hai simple
+      ye is ka head hota hai is lye thead main a raha hai phir thead main ek tag ata hai tr ab ye kya hai ap log socho
+      ge to ye hai table row ke ek row main kya kya hoga phir th main likha gya hai kya kya hoga jese Name RollNo wegara
+      phir os ke baad thead tag khatam ho jata hai or tbody tag shoro hota hai darasal ye table ki body hogi jaha sara
+      data nazar aye ga jese Ali 35 7th 2300 wegara tbody ke andar tr aye ga i aye ga ye row ko zahir karta hai phir tr
+      ke andar td tag a raha hai jo ke table data ko represent karta hai jese Ali 35 7th 2300rs wegara ek ek kar ke td
+      tag main aye ge phir or student ka data likhna ho to phir se tr tag ke andar td likhe ge waha or student ka data
+      dal le ge.Mujhe omed hai ab ap ko HTML main Table banana muskil nhi lage ga.Khair ek chiz jo main batana bhol gya
+      ke table tag ke andar border="1" kyo lagaya to is ka jawab hai ke is lye lagaya ke is ke as pas lines lag jaye nhi
+      to ye bohot ajeeb dikhta hai.</p>
+    <h3>4.Advance Table</h3>
+    <p>Ab mano ko ap logo ke ek student ka sab se pehle Roll
+      No likhna hai phir head main 2 row ho bas 2 ek ho RollNO or dosri ho Name to ham ne RollNo main to Roll Number
+      store karna hai par Name wale main 2 name store karne hai ek first or 2 last to wo kese karo chalo niche example
+      dekh lo.</p>
+    <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+    &lt;h2&gt;This is an Advanced Table&lt;/h2&gt;
+   &lt;table&gt; 
+    &lt;thead&gt;
+      &lt;tr&gt; 
+        &lt;th&gt;RollNo&lt;/th&gt; &lt;th colspan="2"&gt;Name&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+     &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;35&lt;/td&gt; &lt;td&gt;Ali&lt;/td&gt; &lt;td&gt;Haider&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;12&lt;/td&gt; &lt;td&gt;Ahmed&lt;/td&gt; &lt;td&gt;Shah&lt;/td&gt; 
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;56&lt;/td&gt; &lt;td&gt;Abdulah&lt;/td&gt; &lt;td&gt;Khubaib&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+   &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    <div class="output-label">Output:</div>
+    <iframe class="auto-height-iframe" srcdoc="
+        <h2>This is an Advanced Table</h2>
+        <table border='1'> 
+    <thead>
+      <tr> 
+        <th>RollNo</th> <th colspan='2'>Name</th>
+      </tr>
+    </thead>
+     <tbody>
+      <tr>
+        <td>35</td> <td>Ali</td> <td>Haider</td>
+      </tr>
+      <tr>
+        <td>12</td> <td>Ahmed</td> <td>Shah</td> 
+      </tr>
+      <tr>
+        <td>56</td> <td>Abdulah</td> <td>Khubaib</td>
+      </tr>
+    </tbody>
+   </table>
+   
+      "></iframe>
+    <h3>5.Colspan="2" Kyo use kya</h3>
+    <p>Ye ye batata hai ke is ek row main kitna data aye mene 2 keh dya to 2 aya.</p>
+    <h3>6.Another Problem</h3>
+    <p>Ab dekho hame ek insan ka name dikhana hai or os ke phone numbers bhi dikhane hai matlab ek conatct information
+      wala table banana hai to ye kaise banaye ao example code main dekhte hai.</p>
+    <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+    &lt;h2&gt;This is another table&lt;/h2&gt;
+   &lt;table border="1"&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Name:&lt;/th&gt;
+            &lt;td&gt;Ali Ahmed&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th rowspan="2"&gt;Telephone:&lt;/th&gt;
+            &lt;td&gt;5558889997&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;5555988865&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    <div class="output-label">Output:</div>
+    <iframe class="auto-height-iframe" srcdoc="
+        <h2>This is another table</h2>
+   <table border='1'>
+    <tbody>
+        <tr>
+            <th>Name:</th>
+            <td>Ali Ahmed</td>
+        </tr>
+        <tr>
+            <th rowspan='2'>Telephone:</th>
+            <td>5558889997</td>
+        </tr>
+        <tr>
+            <td>5555988865</td>
+        </tr>
+    </tbody>
+</table>
+   
+      "></iframe>
+    <h3>7.Is main kya ho raha hai</h3>
+    <p>Is ko aram se samjo sab se pehle table tag ke andar sab kuch aye ga phir thead aye ga jaha pore table ka title
+      aye ga or colspan 2 hai matlab ye 2 column ki jagah le raha hai phir thead tag khatam hota hai phir tbody tag
+      shoro hota hai jaha th main Name likha jata hai phir os ka data dya jata hai jo ke hai Ali Ahmed phir nayi tr
+      shoro hoti hai jaha th ke andar ek attribute dala jata hai jo hai rowspan="2" yani ke ye 2 rows ki jagah ko le ga
+      oe phir niche td main pehle number likha jata hai phir nayi tr yani row banate hai jaha dosra number likhte
+      hai.Omed hai ab ap ko samaj a gya hoga.</p>
+      </div>
+      <div id="lesson5" class="lesson-section">
+    <h1>Lesson - 5: Detail about Input tags</h1>
+    <h3>1.Input kitne types ke hote hai?</h3>
+    <p>Input tag 24 types ke hote hai par ham kuch hi tags ke bare main parhe ge to chalo start karte hai. sab se pehle
+      ham input ke sath label tag ko lagate hai ye lagana zarori hota hai wese na lagao tab bhi chale ga par is ka asli
+      use ap ko agge chal kar pata chale ga</p>
+    <h3>2.Input Tag ka basic structure</h3>
+    <p>Is ka structure kuch esa hota hai:</p>
+    <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    <div class="output-label">Output:</div>
+    <iframe class="auto-height-iframe" srcdoc="
+        <label for='name'>Name:</label>
+        <input type='text' id='name'>
+   
+      "></iframe>
+    <h3>3.Ye kya hai?</h3>
+    <p>Is ko is tarha samjo ke label tag input ke sath jora rehta hai is ka asli use agge chal kar pata chale ga label
+      tag ke andar ek attribute hai for os main wo chiz likhna jo input tag ke andar ek attribute hai id os main jo
+      likho ge yani id or for jo label main hai dono ke name same hone chayie or input main ek or attribute hai type ka
+      or yaha bohot si types a sakti hai jin ko ham janne wale hai.</p>
+    <h3>4.Sab se pehle Advance Chiz</h3>
+    <p>Agar ap input tag ke andar ek or attribute add karte ho placeholder name ka to app os main wo likho jo ap ko show
+      karwana hai phir jab user dekhe ga to ose pata chal jaye ga jab wo likhne lage ga to wo gayab ho jaye ga abhi agar
+      ap ko samaj nhi a rahi to khod dekh lo.</p>
+    <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" placeholder="Enter your name"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    <div class="output-label">Output:</div>
+    <iframe class="auto-height-iframe" srcdoc="
+        <label for='name'>Name:</label>
+        <input type='text' id='name' placeholder='Enter your name'>
+      "></iframe>
+    <h3>5.Input type "tel"</h3>
+    <p>Agar app input ke attribute type main text ki jagah tel dal do to ye user se os ka phone number le ga chalo niche
+      dekh lo.</p>
+    <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+    &lt;label for="phone-num"&gt;Phone Number:&lt;/label&gt;
+    &lt;input type="tel" id="Phone-num" placeholder="Enter your Phone Number"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    <div class="output-label">Output:</div>
+    <iframe class="auto-height-iframe" srcdoc="
+         <label for='phone-num'>Phone Number:</label>
+    <input type='tel' id='Phone-num' placeholder='Enter your Phone Number'>
+      "></iframe>
+    <h3>6.Input type "email"</h3>
+    <p>Ye user se email le ga niche khod dekh lo.</p>
+    <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+    &lt;label for="Email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="Email" placeholder="Enter your Email"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    <div class="output-label">Output:</div>
+    <iframe class="auto-height-iframe" srcdoc="
+         <label for='Email'>Email:</label>
+    <input type='email' id='Email' placeholder='Enter your Email'>
+      "></iframe>
+    <h3>7.Input type "password"</h3>
+    <p>Jab hame password ke lye kuch bana ho ke user waha apna password dale to ham input os ke attribute type ko
+      password main set karte hain niche dekho.</p>
+    <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+    &lt;label for="Password"&gt;Password:&lt;/label&gt;
+    &lt;input type="password" id="Password" placeholder="Enter your Password"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    <div class="output-label">Output:</div>
+    <iframe class="auto-height-iframe" srcdoc="
+         <label for='Password'>Password:</label>
+    <input type='password' id='Password' placeholder='Enter your Password'>
+      "></iframe>
+    <h3>8.Input type "date"</h3>
+    <p>Acha agar ap ko user se os ki date of birth leni ho to kese lo ge to is ka jawab hai input ke attribute ki value
+      ko date main set karke niche dekho.</p>
+    <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+    &lt;label for="DOB"&gt;DOB:&lt;/label&gt;
+    &lt;input type="date" id="DOB" placeholder="Enter your DOB"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    <div class="output-label">Output:</div>
+    <iframe class="auto-height-iframe" srcdoc="
+         <label for='DON'>Email:</label>
+    <input type='date' id='DOB' placeholder='Enter your DOB'>
+      "></iframe>
+    <h3>9.Select and option Tags</h3>
+    <p>Ab ham select or option Tags ke bare main parhe ge manlo ap ne user se pochna hai ke os ka gender kya hai to wo
+      kese chose kare ga os ke lye ye selcet or option tag hai pehle examle code dekho baad main bat kare ge.</p>
+    <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;h1&gt;Select your gender&lt;/h1&gt;
+    &lt;label for="gender"&gt;Gender:&lt;/label&gt;
+    &lt;select id="gender"&gt;
+      &lt;option value="male"&gt;Male&lt;/option&gt;
+      &lt;option value="female"&gt;Female&lt;/option&gt;
+      &lt;option&gt;Other value="other"&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    <div class="output-label">Output:</div>
+    <iframe class="auto-height-iframe" srcdoc="
+         <h1>Select your gender</h1>
+         <label for='gender'>Gender:</label>    
+         <select id='gender'>
+      <option>Male</option>
+      <option>Female</option>
+      <option>Other</option>
+    </select>
+      "></iframe>
+    <h3>10.Yaha Kya ho raha hai?</h3>
+    <p>Is main bhi ham ne label tag ka use kya hai or ab ham select tag ke bare main jante hai darasal ye ek chiz banata
+      hai jaha option hote hai or user onhe select kar sakta hai phir select tag ke andar hi option tags banaye jate hai
+      jin main option dale jate hai mere khyal se ab ap samaj gaye ho ge.Khair har option tag ke andar mene value di hai
+      take jab end main user sumbit kare to data value ke hisab se set ho jaye.</p>
+    <h3>11.Input type "radio"</h3>
+    <p>Ab man lo ek banda kisi chiz ka subscription le raha hai to wo ya to basic le ga ya to premium ya phir vip le ga
+      wo sare ek sath nhi le sakta bas abb is ke bare main ham dekhe ge ap niche ek example code dekhe.</p>
+    <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;h1&gt;Select your Plan&lt;/h1&gt;
+  &lt;input type="radio" id="basic" value="basic" name="subscription"&gt; 
+  &lt;label for="basic"&gt;Basic&lt;/label&gt;
+  &lt;input type="radio" id="premium" value="premium" name="subscription"&gt; 
+  &lt;label for="premium"&gt;Premium&lt;/label&gt;
+  &lt;input type="radio" id="vip" value="vip" name="subscription"&gt; 
+  &lt;label for="vip"&gt;VIP&lt;/label&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    <div class="output-label">Output:</div>
+    <iframe class="auto-height-iframe" srcdoc="
+         <h1>Select your Plan</h1>
+         <input type='radio' id='basic' value='basic' name='subscription'>
+         <label for='basic'>Basic</label>
+         <input type='radio' id='premium' value='premium' name='subscription'>
+         <label for='premium'>Premium</label>
+         <input type='radio' id='vip' value='vip' name='subscription'>
+         <label for='vip'>VIP</label>
+         
+      "></iframe>
+    <h3>12.Yaha kya ho raha hai?</h3>
+    <p>Yaha ab ap ko label ka asli use pata chale ga darasal pehle likha input type di radio phir id di basic phir value
+      di basic phir name dya subscription jo ke sab ko same hi dya hai phir ab samjo ke name kyo dya wo is lye dya kyo
+      ki sab input ke name same the to rule ke mutabiq ek hi name select ho ga so adha logic samaj gaye ab value is lye
+      di ke jab user ne ye select kya to value kya store karni thi is lye so ab tum sab samaj gaye phir label main for
+      main wo value dali jo ke input ke id attribute main thi ab user agar text main bhi click karta hai to os ka option
+      select ho jaye ga kyo ki wo text input se label hai ap mujhe pora yaqeen hai ke ap ko sab samaj a gya.</p>
+    <h3>13.Input type "checkbox"</h3>
+    <p>Ab ap jabb bhi koy ap install karte ho to dekhte ho ge ke ap ke samne ata hai "I agree to the term and condition"
+      or os ko check karna hota hai tabhi agge jate hai to ye bhi same hai niche khod hi dekh lo.</p>
+    <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;input type="checkbox" id="term"&gt;
+   &lt;label for="term"&gt;I agree to the terms and condition&lt;/lebel&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    <div class="output-label">Output:</div>
+    <iframe class="auto-height-iframe" srcdoc="
+        <input type='checkbox' id='term'>
+         <label for='term'>I agree to the term and condition</label>
+         
+      "></iframe>
+    <h3>14.What is textarea tag</h3>
+    <p>Is ko ap yo samjo ke is main user kuch bhi likh sakta hai. Is ki example niche hai.Lekin is main ap log rows
+      attribute bhi use kar sakte ho ke ye kitne rows ka ho or ap log cols attribute ka bhi use kar sakte ho ke ye kitne
+      columns ka ho.</p>
+    <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;textarea placeholder="Enter your comment!" rows="5"&gt;&lt;/textarea&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    <div class="output-label">Output:</div>
+    <iframe class="auto-height-iframe" srcdoc="
+        <textarea placeholder='Enter your comment!' rows='5'></textarea>
+      "></iframe>
+    <h3>button tag ke andar type attribute ye kya hai?</h3>
+    <p>Jab pora data kisi file main store karna ho to button ke andar type="sumbit ka use kar sakte ho."</p>
+    <h2>Project Number 1</h2>
+    <h3>1.Ham log esa project bana rahe hai jo user se data le ga or ose ek file main.php main store kare ga khair asal
+      main esa hoga nhi ap ko php sikhna hoga lekin ham log example ke lye dekh sakte hai ham log yaha form tag ka use
+      kare ge jis ke andar baki sab tag aye ge or ham har input select tag ke andar required attribute ka use kare ge jo
+      ye dikhaye ga ke ye chiz fil karni hi karni hai nhi to sumbit nhi hoga data.yad rakhna har input apne ek div main a raha hai yani har kisi ka apna ek div tag hai yaha ap ko div ka use karna bhi a jaye ga.</h3>
+    <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+&lt;form action="main.php"&gt;
+   &lt;!-- User se Name lene ke lye input type="name" --&gt;
+   &lt;div&gt;
+     &lt;label for="name"&gt;Name:&lt;/label&gt;
+     &lt;input type="text" id="name" placeholder="Enter your name" required&gt;
+   &lt;/div&gt;
+   &lt;!-- User se Phone Number lene ke lye input type="tel" --&gt;
+   &lt;div&gt;
+     &lt;label for="phone-num"&gt;Phone Number:&lt;/label&gt;
+     &lt;input type="tel" id="Phone-num" placeholder="Enter your Phone Number" required&gt;
+   &lt;/div&gt;
+   &lt;!-- User se Password lene ke lye input type="password" --&gt;
+   &lt;div&gt;
+     &lt;label for="Password"&gt;Password:&lt;/label&gt;
+     &lt;input type="password" id="Password" placeholder="Enter your Password" required&gt;
+   &lt;/div&gt;
+   &lt;!-- User se Date of Birth lene ke lye input type="date" --&gt;
+   &lt;div&gt;
+     &lt;label for="DOB"&gt;DOB:&lt;/label&gt;
+     &lt;input type="date" id="DOB" placeholder="Enter your DOB" required&gt;
+   &lt;/div&gt;
+   &lt;!-- User se os ka gender lene ke lye --&gt;
+   &lt;div&gt;
+     &lt;h1&gt;Select your gender&lt;/h1&gt;
+      &lt;label for="gender"&gt;Gender:&lt;/label&gt;
+      &lt;select id="gender" required&gt;
+        &lt;option value="male"&gt;Male&lt;/option&gt;
+        &lt;option value="female"&gt;Female&lt;/option&gt;
+        &lt;option&gt;Other value="other"&lt;/option&gt;
+      &lt;/select&gt;
+   &lt;/div&gt;
+    &lt;!-- User se os ka plan lene ke lye input type="radio" --&gt;
+    &lt;div&gt;
+      &lt;h1&gt;Select your Plan&lt;/h1&gt;
+      &lt;input type="radio" id="basic" value="basic" name="subscription"&gt; 
+      &lt;label for="basic"&gt;Basic&lt;/label&gt;
+     &lt;input type="radio" id="premium" value="premium" name="subscription" required&gt; 
+     &lt;label for="premium"&gt;Premium&lt;/label&gt;
+     &lt;input type="radio" id="vip" value="vip name="subscription" required&gt;
+  &lt;/div&gt;
+  &lt;!-- User se agree karwane ke lye input type="checkbox" --&gt;
+  &lt;div&gt;
+    &lt;input type="checkbox" id="term" required&gt;
+     &lt;label for="term"&gt;I agree to the terms and condition&lt;/lebel&gt;
+  &lt;/div&gt;
+   &lt;!-- User se Comment lene ke lye textarea Tag ka use --&gt;
+ &lt;div&gt;
+   &lt;label for="comment"&gt;Comment&lt;/label&gt;
+   &lt;textarea id="comment" placeholder="Enter your comment!" rows="5"&gt;&lt;/textarea&gt;
+ &lt;/div&gt;
+   &lt;!-- Sab kuch ek file main submit ho jaye ga is button ko dabane se! --&gt;
+  &lt;div&gt;
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    <div class="output-label">Output:</div>
+    <iframe class="auto-height-iframe" srcdoc="
+   <!-- User se Name lene ke lye input type='name' -->
+   <div>
+     <label for='name'>Name:</label>
+     <input type='text' id='name' placeholder='Enter your name' required>
+   </div>
+   <!-- User se Phone Number lene ke lye input type='tel' -->
+   <div>
+     <label for='phone-num'>Phone Number:</label>
+     <input type='tel' id='Phone-num' placeholder='Enter your Phone Number' required>
+   </div>
+   <!-- User se Password lene ke lye input type='password' -->
+   <div>
+     <label for='Password'>Password:</label>
+     <input type='password' id='Password' placeholder='Enter your Password' required>
+   </div>
+   <!-- User se Date of Birth lene ke lye input type='date' -->
+   <div>
+     <label for='DOB'>DOB:</label>
+     <input type='date' id='DOB' placeholder='Enter your DOB' required>
+   </div>
+   <!-- User se os ka gender lene ke lye -->
+   <div>
+     <h1>Select your gender</h1>
+      <label for='gender'>Gender:</label>
+      <select id='gender' required>
+        <option value='male'>Male</option>
+        <option value='female'>Female</option>
+        <option value='other'>Other</option>
+      </select>
+   </div>
+    <!-- User se os ka plan lene ke lye input type='radio' -->
+    <div>
+      <h1>Select your Plan</h1>
+      <input type='radio' id='basic' value='basic' name='subscription'> 
+      <label for='basic'>Basic</label>
+     <input type='radio' id='premium' value='premium' name='subscription' required> 
+     <label for='premium'>Premium</label>
+     <input type='radio' id='vip' value='vip' name='subscription' required>
+     <label for='vip'>VIP</label>
+  </div>
+  <!-- User se agree karwane ke lye input type='checkbox' -->
+  <div>
+    <input type='checkbox' id='term' required>
+     <label for='term'>I agree to the terms and condition</lebel>
+  </div>
+   <!-- User se Comment lene ke lye textarea Tag ka use -->
+ <div>
+   <label for='comment'>Comment</label>
+   <textarea id='comment' placeholder='Enter your comment!' rows='5'></textarea>
+ </div>
+   <!-- Sab kuch ek file main submit ho jaye ga is button ko dabane se! -->
+  <div>
+    <button type='submit'>Submit</button>
+  </div>
+      "></iframe>
+      <h2>Mubarak Ho!</h2>
+      <h3>Agar ap log yaha tak a gaye or ap ko sab kuch ache se a gya hai to ap log HTML sih choke ho or ab ap log agge barh sakte ho CSS ya JS ki taraf.</h3>
+      </div>
+
+
+
+  </div>
+
+
+  <footer>© 2025 HTML Course by Raja Najaf Khan</footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+
+      function resizeIframe(iframe) {
+        if (iframe.contentWindow && iframe.contentDocument) {
+
+          let body = iframe.contentDocument.body;
+          if (body) {
+
+            let newHeight = body.scrollHeight + 20;
+
+
+            iframe.style.height = newHeight + 'px';
+          }
+        }
+      }
+
+      const iframes = document.querySelectorAll('iframe');
+
+      iframes.forEach(iframe => {
+
+        iframe.onload = function () {
+          resizeIframe(iframe);
+        };
+
+
+        resizeIframe(iframe);
+      });
+    });
+      document.querySelectorAll('.lesson-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          window.scrollTo({
+            top: targetElement.offsetTop - 20,
+            behavior: 'smooth'
+          });
+        });
+      });
+      document.getElementById('languageBtn').addEventListener('click', function() {
+        window.location.href = 'language-selecter.html';
+      });
+  </script>
+
+</body>
+
+</html>
